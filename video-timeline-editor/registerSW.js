@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/app-release/video-timeline-editor/sw.js', { scope: '/app-release/video-timeline-editor/' })})}
