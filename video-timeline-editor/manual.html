@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta charset="UTF-8"><title>動画タイムラインエディタ（スマホ版） v1.1.0 — 動作マニュアル</title><style>
+  :root { --primary: #2563eb; --bg: #f8fafc; --text: #0f172a; --muted: #64748b; --border: #e2e8f0; }
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI','Yu Gothic UI',sans-serif; max-width: 820px; margin: 0 auto; padding: 32px 24px; color: var(--text); background:#fff; line-height: 1.7; }
+  header { border-bottom: 3px solid var(--primary); padding-bottom: 16px; margin-bottom: 32px; }
+  h1 { color: var(--primary); margin: 0 0 8px; font-size: 28px; }
+  .meta { color: var(--muted); font-size: 14px; }
+  h2 { color: var(--primary); border-left: 4px solid var(--primary); padding-left: 12px; margin-top: 40px; font-size: 20px; }
+  h3 { font-size: 16px; margin-top: 24px; }
+  section { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 20px 24px; margin-bottom: 16px; }
+  ol, ul { padding-left: 24px; } li { margin: 6px 0; }
+  code { background: #e2e8f0; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; }
+  a { color: var(--primary); }
+  table { width:100%; border-collapse: collapse; margin:12px 0; }
+  th, td { border:1px solid var(--border); padding:8px 12px; text-align:left; }
+  th { background: var(--primary); color:#fff; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; text-align: center; }
+</style></head>
+<body>
+<header><h1>動画タイムラインエディタ（スマホ版） <span style="font-weight:normal;font-size:18px;">v1.1.0</span></h1>
+<div class="meta">スマホ版(PWA) 動作マニュアル — リリース日: 2026-06-07</div></header>
+
+<section><h2>アプリ概要</h2>
+  <p>スマートフォンのブラウザで動く版です。インストール（ストア）不要で、URLを開いて「ホーム画面に追加」するとアプリのように使えます。データは端末内に保存され、オフラインでも起動できます。</p>
+  <p>公開URL: <a href="https://deftec96-crypto.github.io/app-release/video-timeline-editor/">https://deftec96-crypto.github.io/app-release/video-timeline-editor/</a></p></section>
+<section><h2>ホーム画面への追加（インストール）</h2>
+  <h3>iPhone / iPad（Safari）</h3>
+  <ol>
+    <li><strong>Safari</strong>で上記URLを開く（※Safari必須。他ブラウザは不可）</li>
+    <li>画面下の共有ボタン（□に↑）をタップ</li>
+    <li>「ホーム画面に追加」→「追加」</li>
+  </ol>
+  <h3>Android（Chrome）</h3>
+  <ol>
+    <li><strong>Chrome</strong>で上記URLを開く</li>
+    <li>「アプリをインストール」バナー、または右上⋮メニュー →「アプリをインストール」</li>
+    <li>「インストール」をタップ</li>
+  </ol></section>
+
+<section><h2>基本操作</h2>
+  <h3>1. プロジェクト</h3>
+  <ul>
+    <li>「＋ 新規作成」でプロジェクトを追加。名前は上部の入力欄でいつでも変更できます。</li>
+    <li>検索ボックスでプロジェクトを名前で絞り込めます。</li>
+  </ul>
+  <h3>2. 目標尺と全体尺</h3>
+  <ul>
+    <li>「合計／目標尺／余白」を表示。目標尺は直接編集できます（例 <code>20:00</code>）。</li>
+    <li>合計が目標尺を超えると合計が赤字になり「⚠ 超過中」を表示します。</li>
+  </ul>
+  <h3>3. ブロックの追加・編集</h3>
+  <ul>
+    <li>「＋ 自由ブロック」「🔒 固定ブロック」で追加。</li>
+    <li>ブロックをタップ/クリックで編集（ラベル・尺・色・メモ）。固定ブロックも尺・色・ラベルは変更可（並び替えのみ不可）。</li>
+  </ul>
+  <h3>4. 並び替え</h3>
+  <ul><li>自由ブロックはドラッグして並び替え（固定ブロックをまたぐ移動も可）。</li></ul>
+  <h3>5. テンプレート</h3>
+  <ul><li>「💾 テンプレ保存」で現在の構成を保存、「📁 テンプレ読込」で一覧から適用。</li></ul>
+</section>
+<section><h2>スマホ版の操作のコツ</h2>
+  <ul>
+    <li><strong>並び替え</strong>：自由ブロックの左端ハンドル（⛭）を<strong>長押ししてからドラッグ</strong>。短いタップは編集を開きます。</li>
+    <li><strong>編集パネル</strong>：ブロックをタップすると下から<strong>ボトムシート</strong>が開きます。シート外をタップで閉じます。</li>
+    <li><strong>プロジェクト一覧</strong>：左上の <strong>☰</strong> でドロワーを開閉。</li>
+    <li>画面は拡大しない設定です（入力時に勝手にズームしません）。</li>
+  </ul></section>
+<section><h2>書き出し / データの受け渡し</h2>
+  <ul>
+    <li><strong>CSV</strong>：構成表をダウンロード</li>
+    <li><strong>🖨 PDF</strong>：印刷画面から「PDFを保存」を選択</li>
+    <li><strong>🖼 PNG</strong>：タイムライン図＋構成表を画像(PNG)でダウンロード（共有・貼り付け用）</li>
+    <li><strong>JSON</strong>：⬇出力でバックアップ、⬆読込で取り込み。<strong>PC（デスクトップ版）とスマホ版のデータ受け渡し</strong>はこのJSONで行います（端末間では自動同期しません）。</li>
+  </ul></section>
+<section><h2>更新・削除・トラブルシュート</h2>
+  <ul>
+    <li><strong>更新</strong>：アプリを一度終了して再起動すると自動で最新版になります（反映しない時はSafariでURLを開き直す／設定→Safari→詳細→Webサイトデータから該当サイトを削除）。</li>
+    <li><strong>削除</strong>：ホーム画面のアイコンを長押し →「アプリを削除」。</li>
+    <li><strong>データ</strong>：端末のブラウザ内（IndexedDB）に保存。念のためJSON出力でバックアップを推奨。</li>
+  </ul></section>
+<footer>動画タイムラインエディタ（スマホ版） v1.1.0 © 2026</footer>
+</body></html>
